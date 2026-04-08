@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Ion Popușoi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .cv-container {
+                flex-direction: row;
+            }
+            .sidebar {
+                width: 35%;
+            }
+            .main-content {
+                width: 65%;
+            }
+        }
+
+        .sidebar {
+            background-color: #1e293b;
+            color: white;
+            padding: 2rem;
+        }
+
+        .main-content {
+            padding: 2.5rem;
+        }
+
+        .section-title {
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .sidebar .section-title {
+            color: #60a5fa;
+            border-color: #334155;
+        }
+
+        .skill-tag {
+            background: #334155;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin: 0.25rem;
+        }
+
+        .job-card {
+            margin-bottom: 1.5rem;
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #3b82f6;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .print-btn:hover {
+            transform: scale(1.1);
+        }
+
+        @media print {
+            .print-btn { display: none; }
+            body { background: white; }
+            .cv-container { box-shadow: none; margin: 0; max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="text-center mb-8">
+                <div class="w-32 h-32 bg-gray-400 rounded-full mx-auto mb-4 border-4 border-blue-500 flex items-center justify-center overflow-hidden">
+                    <i class="fas fa-user text-6xl text-white"></i>
+                </div>
+                <h1 class="text-2xl font-bold">Ion Popușoi</h1>
+                <p class="text-blue-400 font-medium">Manager de Proiect / Specialist IT</p>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="section-title text-sm">Contact</h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center">
+                        <i class="fas fa-phone w-6 text-blue-400"></i>
+                        <span>+40 7xx xxx xxx</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope w-6 text-blue-400"></i>
+                        <span>ion.popusoi@email.com</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-map-marker-alt w-6 text-blue-400"></i>
+                        <span>București, România</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fab fa-linkedin w-6 text-blue-400"></i>
+                        <span>linkedin.com/in/ionpopusoi</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="section-title text-sm">Abilități</h3>
+                <div class="flex flex-wrap -m-1">
+                    <span class="skill-tag">Management de Proiect</span>
+                    <span class="skill-tag">Analiză Date</span>
+                    <span class="skill-tag">Agile / Scrum</span>
+                    <span class="skill-tag">HTML & CSS</span>
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Negociere</span>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="section-title text-sm">Limbi Străine</h3>
+                <ul class="text-sm space-y-2">
+                    <li class="flex justify-between">
+                        <span>Română</span>
+                        <span class="text-blue-400">Nativ</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Engleză</span>
+                        <span class="text-blue-400">Avansat (C1)</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Franceză</span>
+                        <span class="text-blue-400">Intermediar (B2)</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="mb-10">
+                <h2 class="section-title text-xl">Profil Profesional</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Profesionist dedicat cu peste 5 ani de experiență în gestionarea proiectelor complexe și optimizarea proceselor operaționale. Recunoscut pentru abilitatea de a conduce echipe multidisciplinare către atingerea obiectivelor strategice, menținând în același timp un nivel ridicat de satisfacție a clienților.
+                </p>
+            </section>
+
+            <section class="mb-10">
+                <h2 class="section-title text-xl">Experiență Profesională</h2>
+                
+                <div class="job-card">
+                    <div class="flex justify-between items-start mb-1">
+                        <h3 class="font-bold text-gray-800 text-lg">Senior Project Manager</h3>
+                        <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-2 py-1 rounded">2020 - Prezent</span>
+                    </div>
+                    <p class="text-gray-500 italic mb-2">Tech Solutions SRL, București</p>
+                    <ul class="list-disc ml-5 text-gray-600 text-sm space-y-1">
+                        <li>Coordonarea unei echipe de 12 specialiști pentru livrarea soluțiilor software personalizate.</li>
+                        <li>Reducerea costurilor operaționale cu 15% prin implementarea metodologiilor Agile.</li>
+                        <li>Gestionarea bugetelor de proiect de până la 500.000 EUR.</li>
+                    </ul>
+                </div>
+
+                <div class="job-card">
+                    <div class="flex justify-between items-start mb-1">
+                        <h3 class="font-bold text-gray-800 text-lg">Analist Business</h3>
+                        <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-2 py-1 rounded">2017 - 2020</span>
+                    </div>
+                    <p class="text-gray-500 italic mb-2">Global Services SA, Cluj-Napoca</p>
+                    <ul class="list-disc ml-5 text-gray-600 text-sm space-y-1">
+                        <li>Analizarea cerințelor de business și transformarea acestora în specificații tehnice.</li>
+                        <li>Îmbunătățirea fluxului de lucru prin automatizarea raportării lunare.</li>
+                        <li>Colaborarea strânsă cu departamentul IT pentru implementarea noului sistem ERP.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="mb-10">
+                <h2 class="section-title text-xl">Educație</h2>
+                
+                <div class="mb-4">
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-gray-800">Master în Managementul Afacerilor</h3>
+                        <span class="text-sm text-gray-500">2015 - 2017</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">Academia de Studii Economice, București</p>
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-gray-800">Licență în Informatică Economică</h3>
+                        <span class="text-sm text-gray-500">2012 - 2015</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">Universitatea din București</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title text-xl">Certificări</h2>
+                <ul class="text-sm text-gray-600 grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <li class="flex items-center">
+                        <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                        PMP - Project Management Professional
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                        Google Data Analytics Certificate
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-certificate text-blue-500 mr-2"></i>
+                        Certified Scrum Master (CSM)
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <!-- Print Button -->
+    <button class="print-btn" onclick="window.print()" title="Printează CV-ul">
+        <i class="fas fa-print text-xl"></i>
+    </button>
+
+</body>
+</html>
